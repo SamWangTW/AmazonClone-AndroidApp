@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The manifest is the “instruction manual” Android reads before running your app. -->
+<!-- xmlns:android → provides access to Android attributes like android:name, android:icon, etc.
+     xmlns:tools → gives extra attributes used by Android Studio (like lint or merge tools).-->
+<!-- Root of the app configuration -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools">
+    <!-- (Optional but common) Needed for network calls -->
+    <!-- <uses-permission android:name="android.permission.INTERNET" /> -->
+
+    <!-- Defines global app settings and components -->
+    <application
+        android:name=".AmazonCloneApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AmazonClone">
+
+        <!-- Declares screens; MainActivity is your launcher -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AmazonClone">
+            <!-- Tells Android which screen to start when user opens the app -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
